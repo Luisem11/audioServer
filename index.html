@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Audio player</title>
+</head>
+
+<body>
+
+	<div>
+		<h3>Audio player</h3>
+		<button id="play">Play</button>
+		<button id="stop">Stop</button>
+		<p>Ejemplo de como consumir nuestro propio server de streaming de audio con nodejs.</p>
+
+		<audio controls id="violonchelo" class="audio" src="http://127.0.0.1:5000/audio/andrew_rayel_impulse.mp3"
+			preload="" muted></audio>
+		<audio controls id="violonchelo" class="audio" src="http://127.0.0.1:5000/audio/groove_armada_paris.mp3"
+			preload="" muted></audio>
+		<audio controls id="violonchelo" class="audio" src="http://127.0.0.1:5000/audio/andrew_rayel_impulse.mp3"
+			preload="" muted></audio>
+
+	</div>
+	<!-- jQuery, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script>
+		var playBtn = document.getElementById("play");
+		var stopBtn = document.getElementById("stop");
+
+
+		playBtn.onclick = function () {
+			$(".audio").each(function (index) {
+				$(this)[0].play();
+				$(this)[0].muted = false;
+			});
+		};
+	</script>
+</body>
+
+</html>
