@@ -14,4 +14,7 @@
     "http": "0.0.0",
     "pizzicato": "^0.6.4"
   }
+  "engines": {
+    "node": "10.x"
+  }
 }
